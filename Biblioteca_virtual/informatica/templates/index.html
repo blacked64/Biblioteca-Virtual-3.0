@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div >
+    <h1>Biblioteca Virtual</h1>
+        <p>Bienbenido a la<em> Biblioteca-Virtual </em>del PNF informatica</p>
+    <h2>Contenido dinamico</h2>
+        <p>la Biblioteca cuenta con:</p>
+        <ul>
+            <li><strong>Libros:</strong> {{ num_books }}</li>
+        </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Lista de Libros</h1>
+    {% if book_list %}
+    <ul>
+        {% for book in book_list %}
+        <li>
+            {% load static %}
+            <p><a href="">{{ book.title }}</a>{% for genre in book.genre.all %}{{ genre }}{% if not forloop.last %},{% endif %}{% endfor %}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>El libro que buscas no esta Disponible</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Title: {{ book.title }}</h1>
+
+    <div class="">
+        <strong>Genre:</strong>
+        {% for genre in book.genre.all %}
+            {{ genre }}
+            {% if not forloop.last %},
+            <div>
+
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
